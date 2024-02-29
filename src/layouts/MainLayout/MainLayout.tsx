@@ -6,7 +6,7 @@ export const MainLayout = ({
   className?: string;
 }) => {
   return (
-    <main className={"bg-blue-gray-900"}>
+    <main className={""}>
       <div className={className}>{children}</div>
     </main>
   );

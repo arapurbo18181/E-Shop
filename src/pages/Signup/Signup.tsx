@@ -1,9 +1,10 @@
+import { SignupCom } from "../../components";
 import { MainLayout } from "../../layouts";
 
 const Signup = () => {
   return (
     <MainLayout>
-      <h1>Signup</h1>
+      <SignupCom />
     </MainLayout>
   );
 };

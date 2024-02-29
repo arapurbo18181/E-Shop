@@ -1,9 +1,10 @@
+import { LoginCom } from "../../components";
 import { MainLayout } from "../../layouts";
 
 const Login = () => {
   return (
     <MainLayout>
-      <h1>Login</h1>
+      <LoginCom />
     </MainLayout>
   );
 };

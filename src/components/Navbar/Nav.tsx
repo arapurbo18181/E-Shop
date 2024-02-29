@@ -13,7 +13,7 @@ export const Nav = () => {
     >
       <div
         className={` ${
-          state ? "bg-gray-600" : "bg-transparent"
+          state ? "bg-gray-600" : "bg-black bg-opacity-50"
         } w-full md:w-1/2 rounded-full backdrop-blur-2xl text-white py-4 px-4 flex justify-center items-center space-x-16 transition-all duration-500`}
       >
         {!state && <button onClick={() => dispatch(openNav())}>Menu</button>}

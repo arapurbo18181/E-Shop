@@ -2,7 +2,7 @@ import { GoDotFill } from "react-icons/go";
 export const Notice = () => {
   return (
     <div>
-      <div className="group relative overflow-hidden whitespace-nowrap text-white">
+      <div className="group relative overflow-hidden whitespace-nowrap text-gray-800">
         {[...new Array(3)].map((_, i) => (
           <div
             key={i}
