@@ -4,8 +4,7 @@ import { Route, Routes } from "react-router-dom";
 const Homepage = lazy(() => import("./pages/Home/Home"));
 const Aboutpage = lazy(() => import("./pages/About/About"));
 const Productspage = lazy(() => import("./pages/Products/Products"));
-const LoginPage = lazy(() => import("./pages/Login/Login"));
-const SignupPage = lazy(() => import("./pages/Signup/Signup"));
+const AuthPage = lazy(() => import("./pages/Auth/Auth"));
 const ContactPage = lazy(() => import("./pages/Contact/Contact"));
 
 const ProjectRoutes = () => {
@@ -16,8 +15,7 @@ const ProjectRoutes = () => {
           <Route path="/" element={<Homepage />} />
           <Route path="/about" element={<Aboutpage />} />
           <Route path="/shop" element={<Productspage />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/signup" element={<SignupPage />} />
+          <Route path="/auth" element={<AuthPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </Suspense>

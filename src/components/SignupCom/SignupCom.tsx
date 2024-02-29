@@ -26,7 +26,7 @@ const onSubmit = (values: SignupValues) => {
 
 export const SignupCom = () => {
   return (
-    <div className="w-full h-full flex flex-col justify-center items-center space-y-5 my-32">
+    <div className="w-full h-full flex flex-col justify-center items-center space-y-5">
       <h2 className="text-2xl font-bold ">Sign Up</h2>
       <div className="border rounded-xl shadow-xl p-5">
         <Formik

@@ -23,7 +23,7 @@ const onSubmit = (values: LoginValues) => {
 
 export const LoginCom = () => {
   return (
-    <div className="w-full h-full flex flex-col justify-center items-center space-y-5 my-32">
+    <div className="w-full h-full flex flex-col justify-center items-center space-y-5">
       <h2 className="text-2xl font-bold ">Login</h2>
       <div className="border rounded-xl shadow-xl p-5">
         <Formik

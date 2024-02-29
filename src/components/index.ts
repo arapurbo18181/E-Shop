@@ -11,4 +11,5 @@ export * from "./Notice";
 export * from "./Product3d";
 export * from "./SignupCom";
 export * from "./Stepper";
+export * from "./Tabs";
 export * from "./TypewriterHeading";
