@@ -10,7 +10,7 @@ export default withMT({
   theme: {
     extend: {
       animation: {
-        shimmer: "shimmer 2s linear infinite",
+        shimmer: "shimmer 3s linear infinite",
         slide: "slide 25s linear infinite",
       },
       keyframes: {

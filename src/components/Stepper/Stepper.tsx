@@ -1,5 +1,6 @@
 import { Button, Step, Stepper } from "@material-tailwind/react";
 import React from "react";
+import { CartCom, Checkout, CheckoutComplete } from "..";
 
 export function DefaultStepper() {
   const [activeStep, setActiveStep] = React.useState(0);
@@ -27,6 +28,9 @@ export function DefaultStepper() {
           3
         </Step>
       </Stepper>
+      {activeStep === 0 && <CartCom />}
+      {activeStep === 1 && <Checkout />}
+      {activeStep === 2 && <CheckoutComplete />}
       <div className="mt-16 flex justify-between">
         <Button placeholder={""} onClick={handlePrev} disabled={isFirstStep}>
           Prev

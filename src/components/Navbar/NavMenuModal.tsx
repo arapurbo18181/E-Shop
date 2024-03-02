@@ -8,6 +8,7 @@ import { RootState } from "../../store/store";
 const links = {
   navLinks: [
     { title: "Shop", href: "/shop" },
+    { title: "Cart", href: "/cart" },
     { title: "Login", href: "/auth" },
     { title: "Signup", href: "/auth" },
     { title: "About", href: "/about" },

@@ -55,16 +55,23 @@ interface FormField {
 
 interface InputProps {
   label: string;
+  inputType: React.HTMLInputTypeAttribute;
+  name: string;
 }
 
-export const TextInput = ({ label }: InputProps) => {
+export const TextInput = ({ label, inputType, name }: InputProps) => {
   return (
-    <div className="w-72">
-      <Field name={label}>
+    <div className="w-full">
+      <Field name={name}>
         {({ field, meta }: FormField) => {
           return (
             <div>
-              <Input crossOrigin={""} label={label} {...field} />
+              <Input
+                type={inputType}
+                crossOrigin={""}
+                label={label}
+                {...field}
+              />
               {meta.touched && meta.error ? (
                 <div className="text-red-500"> {meta.error} </div>
               ) : null}

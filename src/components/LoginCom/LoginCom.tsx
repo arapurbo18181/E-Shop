@@ -32,8 +32,8 @@ export const LoginCom = () => {
           validationSchema={validationSchema}
         >
           <Form className="space-y-5">
-            <TextInput label="email" />
-            <TextInput label="password" />
+            <TextInput name="email" inputType="email" label="Email" />
+            <TextInput name="password" inputType="password" label="Password" />
             <ShimmerBtn type="submit">Submit</ShimmerBtn>
           </Form>
         </Formik>
