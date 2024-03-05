@@ -8,9 +8,12 @@ import {
 } from "..";
 import { CheckoutForm } from "./CheckoutForm";
 
-export const Checkout = () => {
+export const Checkout = ({ handleNext }: { handleNext: () => void }) => {
   const onSubmit = (values: CheackoutTypes) => {
-    console.log(values);
+    if (values) {
+      console.log(values);
+      handleNext();
+    }
   };
   return (
     <div className="my-10">
@@ -33,7 +36,7 @@ export const Checkout = () => {
             <h1 className="mb-10 text-center text-2xl font-bold">
               Order Summary
             </h1>
-            <div className="rounded-lg max-h-[400px] overflow-y-auto">
+            <div className="rounded-lg max-h-[350px] overflow-y-auto">
               <CartItems />
             </div>
             <div className="h-full rounded-lg border bg-white p-6 shadow-md">

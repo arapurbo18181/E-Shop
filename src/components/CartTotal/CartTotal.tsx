@@ -1,6 +1,12 @@
 import { ShimmerBtn } from "../ui";
 
-export const CartTotal = ({ btnText }: { btnText: string }) => {
+export const CartTotal = ({
+  btnText,
+  handleNext,
+}: {
+  btnText: string;
+  handleNext?: () => void;
+}) => {
   return (
     <>
       <div className="mb-2 flex justify-between">
@@ -19,7 +25,9 @@ export const CartTotal = ({ btnText }: { btnText: string }) => {
           <p className="text-sm text-gray-700">including VAT</p>
         </div>
       </div>
-      <ShimmerBtn type="submit">{btnText}</ShimmerBtn>
+      <ShimmerBtn handleNext={handleNext} type="submit">
+        {btnText}
+      </ShimmerBtn>
     </>
   );
 };

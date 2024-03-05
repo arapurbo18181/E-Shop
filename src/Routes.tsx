@@ -3,10 +3,11 @@ import { Route, Routes } from "react-router-dom";
 
 const Homepage = lazy(() => import("./pages/Home/Home"));
 const Aboutpage = lazy(() => import("./pages/About/About"));
-const Productspage = lazy(() => import("./pages/Products/Products"));
+const Shoppage = lazy(() => import("./pages/Shop/Shop"));
 const AuthPage = lazy(() => import("./pages/Auth/Auth"));
 const ContactPage = lazy(() => import("./pages/Contact/Contact"));
 const CartPage = lazy(() => import("./pages/Cart/Cart"));
+const ProductPage = lazy(() => import("./pages/Product/Product"));
 
 const ProjectRoutes = () => {
   return (
@@ -15,10 +16,11 @@ const ProjectRoutes = () => {
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/about" element={<Aboutpage />} />
-          <Route path="/shop" element={<Productspage />} />
+          <Route path="/shop" element={<Shoppage />} />
           <Route path="/auth" element={<AuthPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/cart" element={<CartPage />} />
+          <Route path="/product" element={<ProductPage />} />
         </Routes>
       </Suspense>
     </>

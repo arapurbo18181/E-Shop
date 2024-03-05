@@ -18,25 +18,16 @@ export function DefaultStepper() {
         isLastStep={(value) => setIsLastStep(value)}
         isFirstStep={(value) => setIsFirstStep(value)}
       >
-        <Step placeholder={""} onClick={() => setActiveStep(0)}>
-          1
-        </Step>
-        <Step placeholder={""} onClick={() => setActiveStep(1)}>
-          2
-        </Step>
-        <Step placeholder={""} onClick={() => setActiveStep(2)}>
-          3
-        </Step>
+        <Step placeholder={""}>1</Step>
+        <Step placeholder={""}>2</Step>
+        <Step placeholder={""}>3</Step>
       </Stepper>
-      {activeStep === 0 && <CartCom />}
-      {activeStep === 1 && <Checkout />}
+      {activeStep === 0 && <CartCom handleNext={handleNext} />}
+      {activeStep === 1 && <Checkout handleNext={handleNext} />}
       {activeStep === 2 && <CheckoutComplete />}
       <div className="mt-16 flex justify-between">
         <Button placeholder={""} onClick={handlePrev} disabled={isFirstStep}>
           Prev
-        </Button>
-        <Button placeholder={""} onClick={handleNext} disabled={isLastStep}>
-          Next
         </Button>
       </div>
     </div>
