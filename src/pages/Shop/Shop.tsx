@@ -7,7 +7,7 @@ import {
 } from "@heroicons/react/20/solid";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import { Fragment, useState } from "react";
-import { PriceSlider } from "../../components";
+import { PriceSlider, Search } from "../../components";
 import { ProductsParallax } from "../../components/ProductsParallax/ProductsParallax";
 import { MainLayout } from "../../layouts";
 
@@ -187,9 +187,7 @@ const Shop = () => {
 
         <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-24">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900">
-              New Arrivals
-            </h1>
+            <Search />
 
             <div className="flex items-center">
               <Menu as="div" className="relative inline-block text-left">

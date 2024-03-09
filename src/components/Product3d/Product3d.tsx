@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import ProductImg from "../../assets/product1.jpg";
 import { ShimmerBtn } from "../ui";
 import { CardBody, CardContainer, CardItem } from "./3dCard";
@@ -17,13 +18,15 @@ export function ThreeDCardDemo({ btnText }: ProductCardProps) {
           Product 1
         </CardItem>
         <CardItem translateZ="100" className="w-full mt-4">
-          <img
-            src={ProductImg}
-            height="1000"
-            width="1000"
-            className=" w-full object-cover rounded-xl group-hover/card:shadow-xl border border-gray-800"
-            alt="thumbnail"
-          />
+          <Link to={"/product"}>
+            <img
+              src={ProductImg}
+              height="1000"
+              width="1000"
+              className=" w-full object-cover rounded-xl group-hover/card:shadow-xl border border-gray-800"
+              alt="thumbnail"
+            />
+          </Link>
         </CardItem>
         <div className="flex justify-between items-center mt-20">
           <CardItem

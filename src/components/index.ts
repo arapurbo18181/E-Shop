@@ -16,6 +16,7 @@ export * from "./Notice";
 export * from "./PriceSlider";
 export * from "./Product3d";
 export * from "./ProductsParallax";
+export * from "./Search";
 export * from "./Sidebar";
 export * from "./SignupCom";
 export * from "./Stepper";
