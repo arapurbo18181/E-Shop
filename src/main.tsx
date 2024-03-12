@@ -4,7 +4,6 @@ import ReactDOM from "react-dom/client";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App.tsx";
-import { Footer, Navbar } from "./components/index.ts";
 import "./index.css";
 import { store } from "./store/store.ts";
 
@@ -13,9 +12,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     <ThemeProvider>
       <BrowserRouter>
         <Provider store={store}>
-          <Navbar />
           <App />
-          <Footer />
         </Provider>
       </BrowserRouter>
     </ThemeProvider>

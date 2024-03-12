@@ -1,3 +1,7 @@
+import { cn } from "../../utils";
+import { Footer } from "./Footer";
+import { Navbar } from "./Navbar";
+
 export const MainLayout = ({
   children,
   className,
@@ -6,8 +10,10 @@ export const MainLayout = ({
   className?: string;
 }) => {
   return (
-    <main className={""}>
-      <div className={className}>{children}</div>
+    <main>
+      <Navbar />
+      <div className={cn(className, ``)}>{children}</div>
+      <Footer />
     </main>
   );
 };

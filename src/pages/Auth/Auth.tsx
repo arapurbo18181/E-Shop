@@ -1,17 +1,18 @@
-import { LoginCom, SignupCom, TabsDemo } from "../../components";
+import { Login, Signup } from "../../features";
 import { MainLayout } from "../../layouts";
+import { Tabs } from "./Tabs";
 
 const Auth = () => {
   return (
     <MainLayout>
-      <TabsDemo
+      <Tabs
         tabs={[
           {
             title: "Login",
             value: "Login",
             content: (
               <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 font-bold text-gray-900 bg-gray-300">
-                <LoginCom />
+                <Login />
               </div>
             ),
           },
@@ -20,7 +21,7 @@ const Auth = () => {
             value: "SignUp",
             content: (
               <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 font-bold text-gray-900 bg-gray-300">
-                <SignupCom />
+                <Signup />
               </div>
             ),
           },
