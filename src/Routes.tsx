@@ -8,6 +8,7 @@ const AuthPage = lazy(() => import("./pages/Auth/Auth"));
 const ContactPage = lazy(() => import("./pages/Contact/Contact"));
 const CartPage = lazy(() => import("./pages/Cart/Cart"));
 const ProductPage = lazy(() => import("./pages/Product/Product"));
+const ProfilePage = lazy(() => import("./pages/Profile/Profile"));
 
 const ProjectRoutes = () => {
   return (
@@ -21,6 +22,7 @@ const ProjectRoutes = () => {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/cart" element={<CartPage />} />
           <Route path="/product" element={<ProductPage />} />
+          <Route path="/profile" element={<ProfilePage />} />
         </Routes>
       </Suspense>
     </>

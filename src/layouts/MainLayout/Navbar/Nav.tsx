@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { closeNav, openNav } from "../../../store/slices/NavToggleSlice";
 import { RootState } from "../../../store/store";
+import { scrollToTop } from "../../../utils";
 import { Sidebar } from "../Sidebar";
 
 export const Nav = () => {
@@ -38,7 +39,10 @@ export const Nav = () => {
             </button>
           )}
           <NavLink
-            onClick={() => dispatch(closeNav())}
+            onClick={() => {
+              dispatch(closeNav());
+              scrollToTop();
+            }}
             className={"text-2xl font-bold "}
             to={"/"}
           >

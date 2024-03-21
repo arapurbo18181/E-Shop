@@ -36,7 +36,7 @@ export const ParallaxScroll = ({
         ref={gridRef}
       >
         <div className="grid gap-10">
-          {firstPart.map((el, idx) => (
+          {firstPart.map((_, idx) => (
             <motion.div
               style={{ y: translateFirst }} // Apply the translateY motion value here
               key={"grid-1" + idx}
@@ -46,14 +46,14 @@ export const ParallaxScroll = ({
           ))}
         </div>
         <div className="grid gap-10">
-          {secondPart.map((el, idx) => (
+          {secondPart.map((_, idx) => (
             <motion.div style={{ y: translateSecond }} key={"grid-2" + idx}>
               <ThreeDCardDemo btnText={"Add To Cart"} />
             </motion.div>
           ))}
         </div>
         <div className="grid gap-10">
-          {thirdPart.map((el, idx) => (
+          {thirdPart.map((_, idx) => (
             <motion.div style={{ y: translateThird }} key={"grid-3" + idx}>
               <ThreeDCardDemo btnText={"Add To Cart"} />
             </motion.div>

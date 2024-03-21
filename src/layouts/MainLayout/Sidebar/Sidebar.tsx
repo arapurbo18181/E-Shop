@@ -3,6 +3,7 @@ import { XMarkIcon } from "@heroicons/react/24/outline";
 import { Fragment } from "react";
 import { Link } from "react-router-dom";
 import { ShimmerBtn } from "../../../components/ui";
+import { scrollToTop } from "../../../utils";
 
 const products = [
   {
@@ -159,7 +160,14 @@ export const Sidebar = ({ open, onClose }: SidebarProps) => {
                         Shipping and taxes calculated at checkout.
                       </p>
                       <div className="mt-6">
-                        <Link onClick={() => onClose()} to="/cart" className="">
+                        <Link
+                          onClick={() => {
+                            onClose();
+                            scrollToTop();
+                          }}
+                          to="/cart"
+                          className=""
+                        >
                           <ShimmerBtn type="button">Checkout</ShimmerBtn>
                         </Link>
                       </div>

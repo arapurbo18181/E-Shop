@@ -1,4 +1,4 @@
-import { Banner, HeroSlider, Notice, Stats } from "../../features";
+import { Banner, HeroSlider, Notice } from "../../features";
 import { MainLayout } from "../../layouts";
 
 const Home = () => {
@@ -7,7 +7,7 @@ const Home = () => {
       <HeroSlider />
       <Notice />
       <Banner />
-      <Stats />
+      {/* <Stats /> */}
       {/* <AnimatedPinDemo /> */}
     </MainLayout>
   );

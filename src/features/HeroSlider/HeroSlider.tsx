@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import SliderImage1 from "../../assets/slider1.jpg";
 import SliderImage2 from "../../assets/slider2.jpg";
 import SliderImage3 from "../../assets/slider3.jpeg";
 import { ShimmerBtn } from "../../components/ui";
+import { scrollToTop } from "../../utils";
 import { ImagesSlider } from "./images-slider";
 
 export function HeroSlider() {
@@ -26,9 +28,11 @@ export function HeroSlider() {
         <motion.p className="font-bold text-xl md:text-6xl text-center bg-clip-text text-white bg-gradient-to-b from-neutral-50 to-neutral-400 py-4">
           The hero section slideshow
         </motion.p>
-        <ShimmerBtn type="button">
-          <span>Shop now →</span>
-        </ShimmerBtn>
+        <Link to={"/shop"} onClick={scrollToTop}>
+          <ShimmerBtn type="button">
+            <span>Shop now →</span>
+          </ShimmerBtn>
+        </Link>
       </motion.div>
     </ImagesSlider>
   );

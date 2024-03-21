@@ -1,9 +1,10 @@
+import { useScrollTrigger } from "@material-ui/core";
 import React, { useState } from "react";
 import CountUp from "react-countup";
-import ScrollTrigger from "react-scroll-trigger";
 
 export const Stats: React.FC = () => {
-  const [countOn, setCountOn] = useState(false);
+  const [countOn] = useState(true);
+  const trigger = useScrollTrigger();
 
   return (
     <section className="text-gray-800 body-font text-center space-y-10">
@@ -16,40 +17,39 @@ export const Stats: React.FC = () => {
         </h2>
       </div>
       <div className="container px-5 mx-auto">
-        <ScrollTrigger
-          onEnter={() => setCountOn(true)}
-          onExit={() => setCountOn(false)}
+        <div
+          className={`flex flex-wrap -m-4 text-center divide-x-2 divide-gray-800 ${
+            trigger ? "opacity-100" : "opacity-0"
+          }`}
         >
-          <div className="flex flex-wrap -m-4 text-center divide-x-2 divide-gray-800">
-            <div className="p-4 sm:w-1/3 w-1/2">
-              <h2 className="title-font font-medium sm:text-4xl text-3xl text-gray-800">
-                {countOn && (
-                  <CountUp start={0} end={200} duration={2} delay={0.1} />
-                )}
-                +
-              </h2>
-              <p className="leading-relaxed">New Customers Per Month</p>
-            </div>
-            <div className="p-4 sm:w-1/3 w-1/2">
-              <h2 className="title-font font-medium sm:text-4xl text-3xl text-gray-800">
-                {countOn && (
-                  <CountUp start={0} end={20000} duration={2} delay={0.1} />
-                )}
-                +
-              </h2>
-              <p className="leading-relaxed">Happy Customers</p>
-            </div>
-            <div className="p-4 sm:w-1/3 w-1/2">
-              <h2 className="title-font font-medium sm:text-4xl text-3xl text-gray-800">
-                {countOn && (
-                  <CountUp start={0} end={79} duration={2} delay={0.1} />
-                )}
-                %
-              </h2>
-              <p className="leading-relaxed">Return Customers</p>
-            </div>
+          <div className="p-4 sm:w-1/3 w-1/2">
+            <h2 className="title-font font-medium sm:text-4xl text-3xl text-gray-800">
+              {countOn && (
+                <CountUp start={0} end={200} duration={2} delay={0.1} />
+              )}
+              +
+            </h2>
+            <p className="leading-relaxed">New Customers Per Month</p>
           </div>
-        </ScrollTrigger>
+          <div className="p-4 sm:w-1/3 w-1/2">
+            <h2 className="title-font font-medium sm:text-4xl text-3xl text-gray-800">
+              {countOn && (
+                <CountUp start={0} end={20000} duration={2} delay={0.1} />
+              )}
+              +
+            </h2>
+            <p className="leading-relaxed">Happy Customers</p>
+          </div>
+          <div className="p-4 sm:w-1/3 w-1/2">
+            <h2 className="title-font font-medium sm:text-4xl text-3xl text-gray-800">
+              {countOn && (
+                <CountUp start={0} end={79} duration={2} delay={0.1} />
+              )}
+              %
+            </h2>
+            <p className="leading-relaxed">Return Customers</p>
+          </div>
+        </div>
       </div>
     </section>
   );

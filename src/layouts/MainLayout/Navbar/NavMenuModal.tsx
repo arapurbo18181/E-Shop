@@ -4,12 +4,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { closeNav, openNav } from "../../../store/slices/NavToggleSlice";
 import { RootState } from "../../../store/store";
+import { scrollToTop } from "../../../utils";
 
 const links = {
   navLinks: [
     { title: "Search", href: "/shop" },
     { title: "Shop", href: "/shop" },
     { title: "Cart", href: "/cart" },
+    { title: "Profile", href: "/profile" },
     { title: "Login", href: "/auth" },
     { title: "Signup", href: "/auth" },
   ],
@@ -131,6 +133,7 @@ export const NavMenuModal = () => {
                     <NavLink
                       key={title}
                       to={href}
+                      onClick={scrollToTop}
                       className="sleek hover:text-yellobg-slate-500"
                     >
                       {title}
@@ -148,6 +151,7 @@ export const NavMenuModal = () => {
                     <NavLink
                       key={title}
                       to={href}
+                      onClick={scrollToTop}
                       className="sleek hover:text-yellobg-slate-500"
                     >
                       {title}
@@ -187,7 +191,10 @@ const MenuItem = ({
         {href ? (
           <NavLink
             to={href}
-            onClick={toggleMenu}
+            onClick={() => {
+              toggleMenu();
+              scrollToTop();
+            }}
             className="text-center text-4xl font-black before:absolute before:bottom-0 before:right-0 before:h-[3px] before:w-0 before:bg-slate-500 before:duration-200 before:ease-out before:content-[''] before:transition-width hover:text-slate-500 hover:before:left-auto hover:before:right-0 hover:before:w-3/5 xs:text-5xl xl:text-6xl 3xl:text-7xl transition-all duration-200"
           >
             {title}
